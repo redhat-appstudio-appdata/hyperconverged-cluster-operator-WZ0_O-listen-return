@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: hyperconverged-cluster-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: hyperconverged-cluster-operator
+    app.kubernetes.io/part-of: hyperconverged-cluster-operator
+  name: hyperconverged-cluster-opclon
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: hyperconverged-cluster-operator
+    weight: 100
+status: {}

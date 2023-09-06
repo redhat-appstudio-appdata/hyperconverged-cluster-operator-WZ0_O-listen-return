@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hyperconverged-cluster-operator
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/ocohen-tenant/hyperconverged-cluster-operator/hyperconverged-cluster-operator@sha256:7d8d970dc504277407b96937abad79d34906c147d55334eeefee5dbb339595a7
+        name: container-image
+        resources: {}
+status: {}
