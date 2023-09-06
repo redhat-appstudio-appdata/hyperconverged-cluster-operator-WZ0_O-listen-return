@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: hyperconverged-cluster-webhook
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: hyperconverged-cluster-webhook
+    app.kubernetes.io/part-of: hyperconverged-cluster-operator
+  name: hyperconverged-cluster-webhook
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: hyperconverged-cluster-webhook
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: hyperconverged-cluster-webhook
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: 10m
+            memory: 256Mi
+status: {}
