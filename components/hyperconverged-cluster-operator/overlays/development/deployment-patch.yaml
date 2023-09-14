@@ -11,7 +11,7 @@ spec:
       creationTimestamp: null
     spec:
       containers:
-      - image: quay.io/redhat-user-workloads/ocohen-tenant/hyperconverged-cluster-operator/hyperconverged-cluster-operator@sha256:106138de0dc59a7de67b7d9e8a5bd7e37e15735189c3612990382eeba800b15d
+      - image: quay.io/redhat-user-workloads/ocohen-tenant/hyperconverged-cluster-operator/hyperconverged-cluster-operator@sha256:7d8d970dc504277407b96937abad79d34906c147d55334eeefee5dbb339595a7
         name: container-image
         resources: {}
 status: {}
